@@ -13,3 +13,14 @@ while i != cont:
         i = i + 1
 
 print(nombres)
+
+j = 0
+k = 0
+jugadores = {}
+
+while j  != cont:
+    for nombre in nombres:
+        jugadores.update({nombre:{}})
+        j = j + 1
+
+print(jugadores)
