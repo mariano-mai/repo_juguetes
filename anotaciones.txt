@@ -1,0 +1,3 @@
+Cuando se ingrese la cantidad de jugadores, se va a definir la cantidad de elementos del diccionario principal.
+- cada uno de esos elementos va a ser un diccionario vacío en un principio y después se les va a agregar las claves
+  con sus respectivos valores iniciales (nombre = nombre, puntos = [], total = 0)

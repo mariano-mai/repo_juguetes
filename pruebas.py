@@ -12,10 +12,12 @@ while i != cont:
 print(numeros)'''
 
 #Agregar elementos a un diccionario
-lista = []
 i = 0
 j = 0
+var = "Y"
 suma = 0
+lista = []
+
 cont = int(input("ingresar cantidad de valores: "))
 
 while i != cont:
@@ -23,21 +25,18 @@ while i != cont:
         valor = int(input("ingrese un número: "))
         lista.append(valor)
         i = i + 1
-#valor = int(input("ingrese un número: "))
-#lista.append(valor)
-while j != cont:
-    for j in range(0,lista[j]):
-        suma = suma + lista[j]
-        print("el valor actual es: ", suma)
-        j = j + 1
-        print("j vale: ", j)
-print("el valor total es: ", suma)
 
-jugador = {
-    "nombre" : "Mariano",
-    "puntos" : lista,
+for j in range(0,len(lista)):
+    suma = suma + lista[j]
+    j = j + 1
+
+jug = {
+    "nombre": "Mariano",
+    "puntos": lista,
+    "total": suma
 }
 
-jugador.update({"total":suma})
+jug.update({"puntos": lista})
+jug.update({"total":suma})
 
-print(jugador)
+print(jug)
