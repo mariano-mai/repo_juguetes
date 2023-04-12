@@ -12,7 +12,7 @@ while i != cont:
 print(numeros)'''
 
 #Agregar elementos a un diccionario
-i = 0
+'''i = 0
 j = 0
 var = "Y"
 suma = 0
@@ -39,4 +39,39 @@ jug = {
 jug.update({"puntos": lista})
 jug.update({"total":suma})
 
-print(jug)
+print(jug)'''
+
+#clase Jugador
+class Jugador:
+    '''Representa a un jugador de loba.'''
+    #constructor
+    def __init__(self,nombre,puntos,total):
+        self.nombre = nombre
+        self.puntos = puntos
+        self.total = total
+    
+    #métodos
+    def puntuar(self):
+        '''añade valores a un lista y los suma'''
+        numeros = []
+        suma = 0
+        i = 0
+        cont = variable
+
+        while i != cont:
+            for i in range(0,cont):
+                valor = int(input("ingrese un número: "))
+                numeros.append(valor)
+                suma = suma + numeros[i]
+                i = i + 1
+
+        print(numeros)
+        print(suma)
+
+variable = int(input("ingresar cantidad de valores: "))
+
+jugador1 = Jugador("Mariano", [], 0)
+jugador2 = Jugador("Agustín", [], 0)
+
+jugador1.puntuar()
+jugador2.puntuar()

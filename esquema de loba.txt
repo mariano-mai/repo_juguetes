@@ -1,0 +1,15 @@
+jugadores = {
+
+	jug1 = {
+		"nombre": "",
+		"puntos": [],
+		"total": 0},
+	jug2 = {
+		"nombre": "",
+		"puntos": [],
+		"total": 0},
+	jug3 = {
+		"nombre": "",
+		"puntos": [],
+		"total": 0}
+}

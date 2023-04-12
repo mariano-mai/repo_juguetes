@@ -14,13 +14,21 @@ while i != cont:
 
 print(nombres)
 
+class Jugador:
+    '''Representa a un jugador de loba.'''
+    #constructor
+    def __init__(self,nombre,puntos,total):
+        self.nombre = nombre
+        self.puntos = puntos
+        self.total = total
+
 j = 0
 k = 0
 jugadores = {}
 
 while j  != cont:
     for nombre in nombres:
-        jugadores.update({nombre:{}})
+        jugadores.update({nombre: Jugador(nombre,[],0)})
         j = j + 1
 
 print(jugadores)
