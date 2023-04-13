@@ -19,8 +19,26 @@ j = 0
 for j in range(0,len(nombres)):
     jugadores.update({nombres[j] : {}})
     j = j + 1
-print(jugadores)
+#print(jugadores)
 
 for elemento in jugadores:
     jugadores[elemento].update({'puntos':[]})
+    jugadores[elemento].update({'total':0})
+#print(jugadores)
+
+#lista = []
+
+for elem in jugadores:
+    lista = []
+    #suma = 0
+    valor = int(input("ingrese un valor: "))
+    lista.append(valor)
+    jugadores[elem].update({'puntos':lista})
+
+#esta parte es para que imprima los nombres en columnas
+cadena = ""
+for elem in jugadores:
+    cadena = cadena + "algo"
+print(cadena)
+
 print(jugadores)
