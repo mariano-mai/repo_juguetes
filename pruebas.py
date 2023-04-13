@@ -42,8 +42,8 @@ jug.update({"total":suma})
 print(jug)'''
 
 #clase Jugador
-class Jugador:
-    '''Representa a un jugador de loba.'''
+'''class Jugador:
+    'Representa a un jugador de loba.'
     #constructor
     def __init__(self,nombre,puntos,total):
         self.nombre = nombre
@@ -52,26 +52,46 @@ class Jugador:
     
     #métodos
     def puntuar(self):
-        '''añade valores a un lista y los suma'''
+        'añade valores a un lista y los suma'
         numeros = []
-        suma = 0
         i = 0
-        cont = variable
+        suma = 0
+        #cont = int(input("ingresar cantidad de valores: ")) #temporal, se va a definir fuera del método
 
-        while i != cont:
-            for i in range(0,cont):
-                valor = int(input("ingrese un número: "))
-                numeros.append(valor)
-                suma = suma + numeros[i]
-                i = i + 1
-
-        print(numeros)
-        print(suma)
-
-variable = int(input("ingresar cantidad de valores: "))
+        while suma < 100:
+            #for i in range(0,cont):
+            valor = int(input("ingrese un número: "))
+            numeros.append(valor)
+            suma = suma + valor
+            #i = i + 1
+            for numero in numeros:
+                print(numero)
+            print("<",suma,">")
 
 jugador1 = Jugador("Mariano", [], 0)
-jugador2 = Jugador("Agustín", [], 0)
+#jugador2 = Jugador("Agustín", [], 0)
 
 jugador1.puntuar()
-jugador2.puntuar()
+#jugador2.puntuar()'''
+
+#recorrer un diccionario
+dicc = {
+    'clave1' : {
+        "nombre" : "Mariano",
+        "puntos" : [],
+        "total" : 0
+    },
+    'clave2' : {
+        "nombre" : "Agustín",
+        "puntos" : [],
+        "total" : 0
+    },
+    'clave3' : {
+        "nombre" : "Francisco",
+        "puntos" : [],
+        "total" : 0
+    }
+}
+
+for key in dicc:
+    print(key)
