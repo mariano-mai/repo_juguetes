@@ -93,6 +93,7 @@ dicc = {
     }
 }
 
+#agrega un número determinado (2) de valores en la clave 'puntos' de cada jugador
 t = 0
 while t < 2:
     for elem in dicc:
