@@ -93,5 +93,21 @@ dicc = {
     }
 }
 
-for key in dicc:
-    print(key)
+t = 0
+while t < 2:
+    for elem in dicc:
+        lista_aux = []
+        lista_aux.extend(dicc[elem]['puntos'])
+        lista = []
+        valor = int(input("ingrese un número: "))
+        lista.append(valor)
+        #for i in range(len(lista)):
+        lista_aux.extend(lista)
+        dicc[elem].update({'puntos':lista_aux})
+        valores = dicc[elem]['puntos']
+        coso = dicc[elem]['nombre']
+        print(coso)
+        print(valores)
+    t = t + 1
+#print(nombres)
+
