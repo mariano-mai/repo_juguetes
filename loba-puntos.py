@@ -17,7 +17,7 @@ jugadores = {}
 j = 0
 
 for j in range(0,len(nombres)):
-    jugadores.update({nombres[j] : {}})
+    jugadores.update({nombres[j] : {'nombre':nombres[j]}})
     j = j + 1
 #print(jugadores)
 
@@ -58,14 +58,14 @@ for elem in jugadores:
         h = h + 1'''
 
 #asigna 1 (UN, singular) valor a cada jugador sin importar el orden (pregunta primero) FUNCIONA!!!
-for elem in jugadores:
+'''for elem in jugadores:
     lista_aux = []
     clave = input("ingrese nombre de un jugador: ").capitalize()
     lista = []
     valor = int(input("ingrese un valor: "))
     lista.append(valor)
     lista_aux.extend(lista)
-    jugadores[clave].update({'puntos':lista_aux})
+    jugadores[clave].update({'puntos':lista_aux})'''
 
 #no funciona, sobreescribe los valores de cada jugador
 '''for elem in jugadores:
@@ -80,6 +80,30 @@ for elem in jugadores:
         lista_aux.extend(lista)
         jugadores[clave].update({'puntos':lista_aux})
         h = h + 1'''
+
+#asigna la cantidad de valores determinada por el while y pregunta primero a qué jugador hay que anadir el punto
+t = 0
+while t < 2:
+    for elem in jugadores:
+        clave = input("ingrese nombre de un jugador: ").capitalize()
+        suma = 0
+        lista_aux = []
+        lista_aux.extend(jugadores[clave]['puntos'])
+        lista = []
+        valor = int(input("ingrese un valor: "))
+        lista.append(valor)
+        lista_aux.extend(lista)
+        jugadores[clave].update({'puntos':lista_aux})
+        for i in range(len(jugadores[clave]['puntos'])):
+            suma = suma + jugadores[clave]['puntos'][i]
+            jugadores[clave].update({'total':suma})
+        valores = jugadores[clave]['puntos']
+        coso = jugadores[clave]['nombre']
+        otro_coso = jugadores[clave]['total']
+        print(coso)
+        print(valores)
+        print(otro_coso)
+    t = t + 1
 
 #esta parte es para que imprima los nombres en columnas
 cadena = ""
