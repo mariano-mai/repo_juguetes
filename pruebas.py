@@ -94,7 +94,7 @@ dicc = {
 }
 
 #agrega un número determinado (2) de valores en la clave 'puntos' de cada jugador
-t = 0
+'''t = 0
 while t < 2:
     for elem in dicc:
         lista_aux = []
@@ -109,6 +109,41 @@ while t < 2:
         coso = dicc[elem]['nombre']
         print(coso)
         print(valores)
-    t = t + 1
-#print(nombres)
+    t = t + 1'''
 
+'''dix = {
+    'valores' : [1,2,3,4,5,6],
+    'total': 0}
+suma = 0
+
+for i in range(len(dix["valores"])):
+    suma = suma + dix['valores'][i]
+dix.update({'total':suma})
+print(suma)
+print(dix)'''
+
+t = 0
+#suma = 0
+while t < 2:
+    for elem in dicc:
+        clave = input("ingrese clave: ")
+        suma = 0
+        #suma = suma + dicc[clave]['total']
+        lista_aux = []
+        lista_aux.extend(dicc[clave]['puntos'])
+        lista = []
+        valor = int(input("ingrese un número para añadir a la lista de puntos: "))
+        lista.append(valor)
+        lista_aux.extend(lista)
+        dicc[clave].update({'puntos':lista_aux})
+        for i in range(len(dicc[clave]["puntos"])):
+            suma = suma + dicc[clave]['puntos'][i]
+            dicc[clave].update({"total":suma})
+        valores = dicc[clave]['puntos']
+        coso = dicc[clave]['nombre']
+        otro_coso = dicc[clave]['total']
+        print(coso)
+        print(valores)
+        print(otro_coso)
+        #print(dicc)
+    t = t + 1
