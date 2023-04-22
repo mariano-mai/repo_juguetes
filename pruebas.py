@@ -76,17 +76,17 @@ jugador1.puntuar()
 
 #recorrer un diccionario
 dicc = {
-    'clave1' : {
+    '1' : {
         "nombre" : "Mariano",
         "puntos" : [],
         "total" : 0
     },
-    'clave2' : {
+    '2' : {
         "nombre" : "Agustín",
         "puntos" : [],
         "total" : 0
     },
-    'clave3' : {
+    '3' : {
         "nombre" : "Francisco",
         "puntos" : [],
         "total" : 0
@@ -111,6 +111,7 @@ while t < 2:
         print(valores)
     t = t + 1'''
 
+#prueba para sumar los valores de una lista
 '''dix = {
     'valores' : [1,2,3,4,5,6],
     'total': 0}
@@ -122,13 +123,12 @@ dix.update({'total':suma})
 print(suma)
 print(dix)'''
 
-t = 0
-#suma = 0
+#este funciona, pero para un número definido de valores
+'''t = 0
 while t < 2:
     for elem in dicc:
         clave = input("ingrese clave: ")
         suma = 0
-        #suma = suma + dicc[clave]['total']
         lista_aux = []
         lista_aux.extend(dicc[clave]['puntos'])
         lista = []
@@ -145,5 +145,36 @@ while t < 2:
         print(coso)
         print(valores)
         print(otro_coso)
-        #print(dicc)
+    t = t + 1'''
+
+t = 0
+while t < 2:
+    for elem in dicc:
+        clave = input("ingrese clave: ")
+        suma = 0
+        lista_aux = []
+        lista_aux.extend(dicc[clave]['puntos'])
+        lista = []
+        valor = int(input("ingrese un número para añadir a la lista de puntos: "))
+        lista.append(valor)
+        lista_aux.extend(lista)
+        dicc[clave].update({'puntos':lista_aux})
+        for i in range(len(dicc[clave]["puntos"])):
+            suma = suma + dicc[clave]['puntos'][i]
+            dicc[clave].update({"total":suma})
+        valores = dicc[clave]['puntos']
+        coso = dicc[clave]['nombre']
+        otro_coso = dicc[clave]['total']
+        print(coso)
+        print(valores)
+        print(otro_coso)
     t = t + 1
+
+lista_resultados = []
+for var in dicc:
+    lista_resultados.append(dicc[var]['total'])
+    print("la lista de resutados es: ",lista_resultados)
+lista_resultados.sort(reverse=True)
+mayor = lista_resultados[0]
+print(lista_resultados)
+print("el valor es: ",mayor)
