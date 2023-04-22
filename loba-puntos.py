@@ -15,9 +15,12 @@ print(nombres)
 
 jugadores = {}
 j = 0
+k = 0
 
 for j in range(0,len(nombres)):
+    #k = j + 1
     jugadores.update({nombres[j] : {'nombre':nombres[j]}})
+    #jugadores.update({nombres[j] : {'id':k}})
     j = j + 1
 #print(jugadores)
 

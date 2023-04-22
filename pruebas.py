@@ -178,3 +178,8 @@ lista_resultados.sort(reverse=True)
 mayor = lista_resultados[0]
 print(lista_resultados)
 print("el valor es: ",mayor)
+
+#función para imprimir lista de nombres
+def listado_nombres():
+    '''imprime los nombres y sus id'''
+    
